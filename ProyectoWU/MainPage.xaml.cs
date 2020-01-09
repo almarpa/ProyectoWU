@@ -26,5 +26,40 @@ namespace ProyectoWU
         {
             this.InitializeComponent();
         }
+
+        private void image_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+            double x = e.GetCurrentPoint(image).Position.X;
+            double y = e.GetCurrentPoint(image).Position.Y;
+            listView.Items.Add((String)("PointerPressed X: " + x + "Y: " + y));
+        }
+
+        private void image_PointerMoved(object sender, PointerRoutedEventArgs e)
+        {
+            double x = e.GetCurrentPoint(image).Position.X;
+            double y = e.GetCurrentPoint(image).Position.Y;
+            listView.Items.Add((String)("PointerMoved X: " + x + "Y: " + y));
+        }
+
+        private void image_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            double x = e.GetCurrentPoint(image).Position.X;
+            double y = e.GetCurrentPoint(image).Position.Y;
+            listView.Items.Add((String)("PointerExited X: " + x + "Y: " + y));
+        }
+
+        private void image_PointerReleased(object sender, PointerRoutedEventArgs e)
+        {
+            double x = e.GetCurrentPoint(image).Position.X;
+            double y = e.GetCurrentPoint(image).Position.Y;
+            listView.Items.Add((String)("PointerReleased X: " + x + "Y: " + y));
+        }
+
+        private void image_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            double x = e.GetCurrentPoint(image).Position.X;
+            double y = e.GetCurrentPoint(image).Position.Y;
+            listView.Items.Add((String)("PointerEntered X: " + x + "Y: " + y));
+        }
     }
 }

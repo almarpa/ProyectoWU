@@ -9,6 +9,11 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="image" Grid.Column="0" Height="435" HorizontalAlignment="Center" VerticalAlignment="Center" PointerPressed="image_PointerPressed" PointerMoved="image_PointerMoved" Source="/Assets/fondo.jpg" FocusVisualPrimaryBrush="#FFE51F1F" Stretch="None" Width="398" PointerExited="image_PointerExited" PointerReleased="image_PointerReleased" PointerEntered="image_PointerEntered"/>
+        <ListView x:Name="listView" Grid.Column="1" Grid.RowSpan="2" FontSize="10"/>
     </Grid>
 </Page>
