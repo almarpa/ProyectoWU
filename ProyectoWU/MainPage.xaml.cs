@@ -61,5 +61,26 @@ namespace ProyectoWU
             double y = e.GetCurrentPoint(image).Position.Y;
             listView.Items.Add((String)("PointerEntered X: " + x + "Y: " + y));
         }
+
+        private void image_PointerWheelChanged(object sender, PointerRoutedEventArgs e)
+        {
+            double x = e.GetCurrentPoint(image).Position.X;
+            double y = e.GetCurrentPoint(image).Position.Y;
+            listView.Items.Add((String)("PointerWheelChanged X: " + x + "Y: " + y));
+        }
+
+        private void image_PointerCanceled(object sender, PointerRoutedEventArgs e)
+        {
+            double x = e.GetCurrentPoint(image).Position.X;
+            double y = e.GetCurrentPoint(image).Position.Y;
+            listView.Items.Add((String)("PointerCanceled X: " + x + "Y: " + y));
+        }
+
+        private void image_PointerCaptureLost(object sender, PointerRoutedEventArgs e)
+        {
+            double x = e.GetCurrentPoint(image).Position.X;
+            double y = e.GetCurrentPoint(image).Position.Y;
+            listView.Items.Add((String)("PointerCaptureLost X: " + x + "Y: " + y));
+        }
     }
 }
