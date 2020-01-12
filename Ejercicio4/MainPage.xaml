@@ -13,7 +13,29 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Image x:Name="image" Grid.Column="0" Height="255" HorizontalAlignment="Center" VerticalAlignment="Center" PointerPressed="image_PointerPressed" PointerMoved="image_PointerMoved" Source="/Assets/fondo.jpg" FocusVisualPrimaryBrush="#FFE51F1F" Stretch="None" Width="217"/>
-        <Image x:Name="image2" Grid.Column="1" Height="255" HorizontalAlignment="Center" VerticalAlignment="Center" PointerPressed="image_PointerPressed" PointerMoved="image_PointerMoved" Source="/Assets/fondo2.jpg" FocusVisualPrimaryBrush="#FFE51F1F" Stretch="None" Width="217" PointerExited="image_PointerExited" PointerReleased="image_PointerReleased" PointerEntered="image_PointerEntered" PointerWheelChanged="image_PointerWheelChanged" PointerCanceled="image_PointerCanceled" PointerCaptureLost="image_PointerCaptureLost"/>
+        <Image Grid.Column="0"
+               Height="255"
+               Source="/Assets/fondo.jpg"  
+               ManipulationDelta="image_ManipulationDelta" 
+               ImageOpened="image_ImageOpened"
+               ManipulationMode="Scale,Rotate,TranslateInertia,TranslateX,TranslateY">
+            <Image.RenderTransform>
+                <CompositeTransform x:Name="ct1">
+
+                </CompositeTransform>
+            </Image.RenderTransform>
+        </Image>
+        <Image Grid.Column="1"
+               Height="255"
+               Source="/Assets/fondo2.jpg"  
+               ManipulationDelta="image_ManipulationDelta2" 
+               ImageOpened="image_ImageOpened2"
+               ManipulationMode="Scale,Rotate,TranslateInertia,TranslateX,TranslateY">
+            <Image.RenderTransform>
+                <CompositeTransform x:Name="ct2">
+
+                </CompositeTransform>
+            </Image.RenderTransform>
+        </Image>
     </Grid>
 </Page>
