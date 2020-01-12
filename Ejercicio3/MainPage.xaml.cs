@@ -29,22 +29,23 @@ namespace Ejercicio3
 
         private void image_ManipulationDelta(object sender, ManipulationDeltaRoutedEventArgs e)
         {
-           
-            Image image = (Image)sender;
-
             // SCALE
-            ImageScaleTransform.CenterX = image.ActualWidth / 2;
-            ImageScaleTransform.CenterY = image.ActualHeight / 2;
-
             ImageScaleTransform.ScaleX /= e.Delta.Scale;
             ImageScaleTransform.ScaleY /= e.Delta.Scale;
 
             // ROTATION
+            ImageRotateTransform.Angle += e.Delta.Rotation;
+        }
+
+        private void image_ImageOpened(object sender, RoutedEventArgs e)
+        {
+            Image image = (Image)sender;
+            
+            //Capturamos la posicíón central de la imagen escalar y rotar manteniendo la posición
+            ImageScaleTransform.CenterX = image.ActualWidth / 2;
+            ImageScaleTransform.CenterY = image.ActualHeight / 2;
             ImageRotateTransform.CenterX = image.ActualWidth / 2;
             ImageRotateTransform.CenterY = image.ActualHeight / 2;
-
-            ImageRotateTransform.Angle += e.Delta.Rotation;
-            
         }
     }
 }

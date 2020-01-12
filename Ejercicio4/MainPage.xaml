@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="Ejercicio4.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Ejercicio4"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="image" Grid.Column="0" Height="255" HorizontalAlignment="Center" VerticalAlignment="Center" PointerPressed="image_PointerPressed" PointerMoved="image_PointerMoved" Source="/Assets/fondo.jpg" FocusVisualPrimaryBrush="#FFE51F1F" Stretch="None" Width="217"/>
+        <Image x:Name="image2" Grid.Column="1" Height="255" HorizontalAlignment="Center" VerticalAlignment="Center" PointerPressed="image_PointerPressed" PointerMoved="image_PointerMoved" Source="/Assets/fondo2.jpg" FocusVisualPrimaryBrush="#FFE51F1F" Stretch="None" Width="217" PointerExited="image_PointerExited" PointerReleased="image_PointerReleased" PointerEntered="image_PointerEntered" PointerWheelChanged="image_PointerWheelChanged" PointerCanceled="image_PointerCanceled" PointerCaptureLost="image_PointerCaptureLost"/>
+    </Grid>
+</Page>

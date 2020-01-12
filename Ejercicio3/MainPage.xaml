@@ -9,19 +9,19 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Image x:Name="image" 
-               Source="/Assets/fondo.jpg" HorizontalAlignment="Center" VerticalAlignment="Center"  
+        <Image Source="/Assets/fondo.jpg"  
                ManipulationDelta="image_ManipulationDelta" 
+               ImageOpened="image_ImageOpened"
                ManipulationMode="Scale,ScaleInertia,Rotate,RotateInertia"
                Stretch="UniformToFill">
-               <Image.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform
                                x:Name="ImageScaleTransform"/>
-                        <RotateTransform
+                    <RotateTransform
                                x:Name="ImageRotateTransform"  />
-                    </TransformGroup>
-               </Image.RenderTransform>
+                </TransformGroup>
+            </Image.RenderTransform>
         </Image>
     </Grid>
 </Page>
