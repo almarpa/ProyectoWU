@@ -8,15 +8,24 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="703" Width="1309">
 
-    <Grid x:Name="grid" RightTapped="grid_RightTapped">
+    <Grid x:Name="grid" DoubleTapped="grid_DoubleTapped" RightTapped="grid_RightTapped">
         <Grid.Background>
             <ImageBrush ImageSource="/Assets/campo.jpg"/>
         </Grid.Background>
+        <Border BorderBrush="Black" BorderThickness="6" Margin="541,0,562,642">
+            <Grid Margin="5,4,4,3" RenderTransformOrigin="0.5,0.5" FocusVisualPrimaryBrush="#FFF91111" Background="White">
 
+                <TextBlock TextAlignment="Right" Foreground="Red" x:Name="marcador1" Text="0" VerticalAlignment="Center" FontSize="50" FontWeight="Bold" FontStyle="Normal" Width="74" Margin="0,0,110,0"/>
+                <TextBlock HorizontalAlignment="Left" Foreground="Blue" x:Name="marcador2" Text="0" VerticalAlignment="Center" FontSize="50" FontWeight="Bold" FontStyle="Normal" Margin="117,0,0,0" Width="67"></TextBlock>
+                <TextBlock HorizontalAlignment="Left" Foreground="Black" Margin="79,0,0,0" Text="-" TextWrapping="Wrap" VerticalAlignment="Center" Width="31" FontSize="80" FontWeight="Bold" SelectionHighlightColor="#FF0D8EF4" Height="118"/>
+            </Grid>
+        </Border>
+        <Rectangle x:Name="porteriaLocal" Fill="Blue" Margin="1239,246,0,247" RenderTransformOrigin="0.5,0.5"/>
+        <Rectangle x:Name="porteriaVisitante" Fill="Red" Margin="0,246,1241,247" RenderTransformOrigin="0.5,0.5"></Rectangle>
+        <Rectangle Fill="White"  HorizontalAlignment="Left" Height="23" Margin="1239,223,0,0" Stroke="Black" VerticalAlignment="Top" Width="70" RadiusY="30"/>
+        <Rectangle Fill="White"  HorizontalAlignment="Left" Height="23" Margin="0,457,0,0" Stroke="Black" VerticalAlignment="Top" Width="70" RadiusY="30"/>
+        <Rectangle Fill="White"  HorizontalAlignment="Left" Height="23" Margin="-1,223,0,0" Stroke="Black" VerticalAlignment="Top" Width="70" RadiusY="30"/>
+        <Rectangle Fill="White"  HorizontalAlignment="Left" Height="23" Margin="1239,457,0,0" Stroke="Black" VerticalAlignment="Top" Width="70" RadiusY="30"/>
 
-        <TextBlock x:Name="marcador1" Margin="604,0,647,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="50" FontWeight="Bold" FontStyle="Normal"/>
-        <TextBlock x:Name="marcador2" HorizontalAlignment="Left" Margin="676,0,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="49" FontSize="50" FontWeight="Bold" SelectionHighlightColor="#FF0D8EF4"/>
-        <Rectangle x:Name="porteriaLocal" Fill="White" Margin="1260,246,0,247" RenderTransformOrigin="0.5,0.5"/>
-        <Rectangle x:Name="porteriaVisitante" Fill="White" Margin="0,246,1258,247" RenderTransformOrigin="0.5,0.5"></Rectangle>
     </Grid>
 </Page>
