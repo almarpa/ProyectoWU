@@ -28,75 +28,34 @@ namespace Ejercicio2
         // BASIC GESTURES 
         private void image_Tapped_1(object sender, TappedRoutedEventArgs e)
         {
+            double x = e.GetPosition(image).X;
+            double y = e.GetPosition(image).Y;
+            listView.Items.Add((String)("Tapped X: " + x + "Y: " + y));
             image.Opacity = image.Opacity - 0.1;
         }
 
         private void image_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
         {
+            double x = e.GetPosition(image).X;
+            double y = e.GetPosition(image).Y;
+            listView.Items.Add((String)("DoubleTapped X: " + x + "Y: " + y));
             image.Opacity = 1.0;
         }
 
         private void image_Holding(object sender, HoldingRoutedEventArgs e)
         {
-            //listView.ItemsSource = null;
+            double x = e.GetPosition(image).X;
+            double y = e.GetPosition(image).Y;
+            listView.Items.Add((String)("Holding X: " + x + "Y: " + y));
+            listView.ItemsSource = null;
             listView.Items.Clear();
         }
-         
-        // POINTER EVENTS 
-        private void image_PointerPressed(object sender, PointerRoutedEventArgs e)
-        {
-            double x = e.GetCurrentPoint(image).Position.X;
-            double y = e.GetCurrentPoint(image).Position.Y;
-            listView.Items.Add((String)("PointerPressed X: " + x + "Y: " + y));
-        }
 
-        private void image_PointerMoved(object sender, PointerRoutedEventArgs e)
+        private void image_RightTapped(object sender, RightTappedRoutedEventArgs e)
         {
-            double x = e.GetCurrentPoint(image).Position.X;
-            double y = e.GetCurrentPoint(image).Position.Y;
-            listView.Items.Add((String)("PointerMoved X: " + x + "Y: " + y));
-        }
-
-        private void image_PointerExited(object sender, PointerRoutedEventArgs e)
-        {
-            double x = e.GetCurrentPoint(image).Position.X;
-            double y = e.GetCurrentPoint(image).Position.Y;
-            listView.Items.Add((String)("PointerExited X: " + x + "Y: " + y));
-        }
-
-        private void image_PointerReleased(object sender, PointerRoutedEventArgs e)
-        {
-            double x = e.GetCurrentPoint(image).Position.X;
-            double y = e.GetCurrentPoint(image).Position.Y;
-            listView.Items.Add((String)("PointerReleased X: " + x + "Y: " + y));
-        }
-
-        private void image_PointerEntered(object sender, PointerRoutedEventArgs e)
-        {
-            double x = e.GetCurrentPoint(image).Position.X;
-            double y = e.GetCurrentPoint(image).Position.Y;
-            listView.Items.Add((String)("PointerEntered X: " + x + "Y: " + y));
-        }
-
-        private void image_PointerWheelChanged(object sender, PointerRoutedEventArgs e)
-        {
-            double x = e.GetCurrentPoint(image).Position.X;
-            double y = e.GetCurrentPoint(image).Position.Y;
-            listView.Items.Add((String)("PointerWheelChanged X: " + x + "Y: " + y));
-        }
-
-        private void image_PointerCanceled(object sender, PointerRoutedEventArgs e)
-        {
-            double x = e.GetCurrentPoint(image).Position.X;
-            double y = e.GetCurrentPoint(image).Position.Y;
-            listView.Items.Add((String)("PointerCanceled X: " + x + "Y: " + y));
-        }
-
-        private void image_PointerCaptureLost(object sender, PointerRoutedEventArgs e)
-        {
-            double x = e.GetCurrentPoint(image).Position.X;
-            double y = e.GetCurrentPoint(image).Position.Y;
-            listView.Items.Add((String)("PointerCaptureLost X: " + x + "Y: " + y));
+            double x = e.GetPosition(image).X;
+            double y = e.GetPosition(image).Y;
+            listView.Items.Add((String)("RightTapped X: " + x + "Y: " + y));
         }
     }
 }

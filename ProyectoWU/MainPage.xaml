@@ -8,12 +8,14 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid Background="LightBlue">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Image x:Name="image" Grid.Column="0" Height="255" HorizontalAlignment="Center" VerticalAlignment="Center" PointerPressed="image_PointerPressed" PointerMoved="image_PointerMoved" Source="/Assets/fondo.jpg" FocusVisualPrimaryBrush="#FFE51F1F" Stretch="None" Width="217" PointerExited="image_PointerExited" PointerReleased="image_PointerReleased" PointerEntered="image_PointerEntered" PointerWheelChanged="image_PointerWheelChanged" PointerCanceled="image_PointerCanceled" PointerCaptureLost="image_PointerCaptureLost"/>
-        <ListView x:Name="listView" Grid.Column="1" Grid.RowSpan="2" FontSize="10"/>
+        <ListView x:Name="listView" Grid.Column="1" Grid.RowSpan="2" FontSize="10" FontWeight="Bold">
+            <ListViewItem FontWeight="Bold" FocusVisualPrimaryBrush="White" />
+        </ListView>
     </Grid>
 </Page>
