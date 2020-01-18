@@ -6,14 +6,14 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource AppBarItemDisabledForegroundThemeBrush}">
 
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Image x:Name="image" Grid.Column="0" Height="255" HorizontalAlignment="Center" VerticalAlignment="Center" Source="/Assets/fondo.jpg" FocusVisualPrimaryBrush="#FFE51F1F" Stretch="None" Width="217" DoubleTapped="image_DoubleTapped" Holding="image_Holding" Tapped="image_Tapped_1" RightTapped="image_RightTapped"/>
+        <Image Stretch="Fill" x:Name="image" Grid.Column="0" Height="455" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Assets/fondo.jpg" FocusVisualPrimaryBrush="#FFE51F1F" Width="363" DoubleTapped="image_DoubleTapped" Holding="image_Holding" Tapped="image_Tapped_1" RightTapped="image_RightTapped" Margin="136,106,0,0"/>
         <ListView x:Name="listView" Grid.Column="1" Grid.RowSpan="2" FontSize="10"/>
     </Grid>
 </Page>

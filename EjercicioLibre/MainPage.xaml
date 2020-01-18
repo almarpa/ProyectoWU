@@ -23,7 +23,7 @@
         <Rectangle x:Name="porteriaLocal" Fill="Blue" Margin="1239,246,0,247" RenderTransformOrigin="0.5,0.5"/>
         <Rectangle x:Name="porteriaVisitante" Fill="Red" Margin="0,246,1241,247" RenderTransformOrigin="0.5,0.5"></Rectangle>
         <Rectangle Fill="White"  HorizontalAlignment="Left" Height="23" Margin="1239,223,0,0" Stroke="Black" VerticalAlignment="Top" Width="70" RadiusY="30"/>
-        <Rectangle Fill="White"  HorizontalAlignment="Left" Height="23" Margin="0,457,0,0" Stroke="Black" VerticalAlignment="Top" Width="70" RadiusY="30"/>
+        <Rectangle Fill="White"  HorizontalAlignment="Left" Height="23" Margin="-2,457,0,0" Stroke="Black" VerticalAlignment="Top" Width="70" RadiusY="30"/>
         <Rectangle Fill="White"  HorizontalAlignment="Left" Height="23" Margin="-1,223,0,0" Stroke="Black" VerticalAlignment="Top" Width="70" RadiusY="30"/>
         <Rectangle Fill="White"  HorizontalAlignment="Left" Height="23" Margin="1239,457,0,0" Stroke="Black" VerticalAlignment="Top" Width="70" RadiusY="30"/>
 
